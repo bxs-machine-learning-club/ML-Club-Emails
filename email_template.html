@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Template</title>
+    <style>
+    @font-face {
+    font-family: Lato;
+    src: url("./Lato/Lato-Regular.ttf")
+    }
+
+    .flexible {
+        display: flex;
+        background-image: linear-gradient(to bottom, #66bb6a, #97b494);
+    }
+
+    #main_section {
+        background-color: #c8e7c9;
+        margin: auto auto 0;
+    }
+
+    body {
+        background-color: #66bb6a;
+    }
+
+    #center-image {
+        width: 15%;
+        height: 15%;
+    }
+
+    #footer {
+        margin-top: 0;
+        display: flex;
+        background-color: #66bb6a
+    }
+
+    .promotional {
+        font-family: Georgia, "Bitstream Charter", "Charis SIL", Utopia, "URW Bookman L", serif;
+        font-size: 13px;
+    }
+
+    .vertical_box {
+        display: block;
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+
+    p, h1{
+        font-family: Lato, Helvetica, "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    h1 {
+        margin: auto;
+        font-size: 36px;
+    }
+
+    </style>
+</head>
+<body>
+<div class="flexible">
+    <hr>
+    <img id="center-image" src="https://cdn.discordapp.com/attachments/688521048664178712/695406448221356082/Screen_Shot_2020-03-21_at_6.24.13_PM.png" alt="ML Club Logo">
+    <hr>
+</div>
+<div style="background-color: #c8e7c9">
+<section id="main_section">
+    <h1 align="center"> ML Club </h1>
+    <p id="message">${MESSAGE}</p>
+    <p class="promotional">Check out the ML Club Blog <a href="http://perceptron.zacharyhine.com" target="_blank">here</a>.</p>
+    <p class="promotional">Check out the ML Club Website <a href="http://bxsml.org" target="_blank">here</a>. </p>
+</section>
+<section id="footer">
+    <hr>
+    <figure class="vertical_box">
+        <img src="https://bxsml.org/images/zach.jpg" alt="President Pic" width="100" height="120">
+        <figcaption>
+            <p>Zachary Hine</p>
+            <p>President</p>
+        </figcaption>
+    </figure>
+    <hr>
+    <figure class="vertical_box">
+        <img src="https://bxsml.org/images/michael.png" alt="VP Pic" width="100" height="120">
+        <figcaption>
+            <p>Michael Batavia</p>
+            <p>Vice President of Learning</p>
+        </figcaption>
+    </figure>
+    <hr>
+    <figure class="vertical_box">
+        <img src="https://bxsml.org/images/james.png" alt="VP 2 Pic" width="100" height="120">
+        <figcaption>
+            <p>James Chu</p>
+            <p>Vice President of Outreach</p>
+        </figcaption>
+    </figure>
+    <hr>
+    <figure class="vertical_box">
+        <img src="https://bxsml.org/images/montaha.png" alt="Secretary Pic" width="100" height="120">
+        <figcaption>
+            <p>Montaha Rahman</p>
+            <p>Secretary</p>
+        </figcaption>
+    </figure>
+    <hr>
+    <figure class="vertical_box">
+        <img src="https://bxsml.org/images/robert.png" alt="Chief of Creative Content Pic" width="100" height="120">
+        <figcaption>
+            <p>Robert Stanciu</p>
+            <p>Chief of Creative Content</p>
+        </figcaption>
+    </figure>
+    <hr>
+</section>
+</div>
+</body>
+</html>
