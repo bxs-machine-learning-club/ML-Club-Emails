@@ -1,4 +1,4 @@
-__author__ = "Michael"
+__author__ = "David"
 
 """This script sends an email to members in the ML Club.
     Make sure to credit Michael Batavia for future usage of the script in the club
@@ -10,7 +10,12 @@ from email.message import EmailMessage
 from email.mime.text import MIMEText
 import argparse
 import csv
+import subprocess
 
+contactsPath=r"C:\Users\School\Downloads\ML-Club-Emails-master\ML-Club-Emails-master\contacts.csv"
+messagePath=r"C:\Users\School\Downloads\ML-Club-Emails-master\ML-Club-Emails-master\message42120.txt"
+templatePath=r"C:\Users\School\Downloads\ML-Club-Emails-master\ML-Club-Emails-master\email_template.html"
+credentialsPath=r"C:\Users\School\Downloads\ML-Club-Emails-master\ML-Club-Emails-master\credentials.txt"
 
 def read_contacts(csv_file):
     first_names = []
@@ -42,7 +47,7 @@ def get_credentials(credentials_file):
 
 
 def setup_email(contacts_file, message_file, html_template, title):
-    user, pwd = get_credentials('credentials.txt')
+    user, pwd = get_credentials(credentialsPath)
     server = smtplib.SMTP(host="smtp.gmail.com", port=587)
     server.starttls()
     server.login(user, pwd)
@@ -61,7 +66,7 @@ def create_email(contacts_file, message_file, html_template, server, subject):
         message = message_template.substitute(PERSON_NAME=name.title())
         html_email: str = html_email_template.substitute(MESSAGE=message)
 
-        user = get_credentials('credentials.txt')[0]
+        user = get_credentials(credentialsPath)[0]
         print(user)
         msg['To'] = email
         # msg['To'] = 'bataviam@bxscience.edu'
@@ -80,11 +85,13 @@ def create_email(contacts_file, message_file, html_template, server, subject):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("contacts_file", help="The csv file of the contacts to send this email to.")
-    parser.add_argument("message_file", help="The message file for the message to send in the email.")
-    parser.add_argument("html_template", help="The HTML template for the nice display in the email")
+    #parser.add_argument("contacts_file", help="The csv file of the contacts to send this email to.")
+    #parser.add_argument("message_file", help="The message file for the message to send in the email.")
+    #parser.add_argument("html_template", help="The HTML template for the nice display in the email")
     parser.add_argument("subject", help="The subject of the email to send.")
 
     args = parser.parse_args()
     subject = args.subject if args.subject else "<no subject>"
-    setup_email(args.contacts_file, args.message_file, args.html_template, subject)
+    setup_email(contactsPath, messagePath, templatePath, subject)
+
+    
