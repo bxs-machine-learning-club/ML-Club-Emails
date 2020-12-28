@@ -8,4 +8,5 @@ If the admins alert you that you can send an email, you can do this but in the m
 1. Edit message42120.txt to say whatever you wish (remember that PERSON_NAME refers to, well, the person's name).
 1. Go to Command Prompt (or Terminal if you are on OSX or Linux).
 1. Follow the prompts to enter in your Bronx Science email, Bronx Science password and the subject of the email.
+
 That's it!
