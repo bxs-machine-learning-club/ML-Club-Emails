@@ -17,7 +17,7 @@ contactsPath=r'C:\Users\School\Downloads\ML-Club-Emails-master\contacts.csv'
 messagePath=r'C:\Users\School\Downloads\ML-Club-Emails-master\message42120.txt'
 templatePath=r'C:\Users\School\Downloads\ML-Club-Emails-master\email_template.html'
 
-testing=0
+testing=1
 
 def passwordcheck(usr,psw):
     server=smtplib.SMTP('smtp.gmail.com:587')
@@ -34,8 +34,10 @@ user=input('User Email: ')
 pwd=stdiomask.getpass(prompt='Password: ', mask='*')
    
 while(passwordcheck(user,pwd)==False):
+    print()
     user=input('User Email: ')
     pwd=stdiomask.getpass(prompt='Password: ', mask='*')
+    print()
   
 def read_contacts(csv_file):
     first_names = []
@@ -113,5 +115,4 @@ if __name__ == "__main__":
     subject = input('Subject: ')
     subject = subject if subject else "<no subject>"
     setup_email(contactsPath, messagePath, templatePath, subject)
-
     
