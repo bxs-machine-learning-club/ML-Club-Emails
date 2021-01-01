@@ -19,9 +19,24 @@ templatePath=r'C:\Users\School\Downloads\ML-Club-Emails-master\email_template.ht
 
 testing=0
 
-user=input('Username: ')
-pwd=stdiomask.getpass()
+def passwordcheck(usr,psw):
+    server=smtplib.SMTP('smtp.gmail.com:587')
+    server.starttls()
+    try:
+        server.login(usr,psw)
+        ret = True
+    except:
+        ret = False
+    server.quit()
+    return ret
 
+user=input('User Email: ')
+pwd=stdiomask.getpass(prompt='Password: ', mask='*')
+   
+while(passwordcheck(user,pwd)==False):
+    user=input('User Email: ')
+    pwd=stdiomask.getpass(prompt='Password: ', mask='*')
+  
 def read_contacts(csv_file):
     first_names = []
     emails = []
