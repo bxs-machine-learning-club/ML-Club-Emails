@@ -38,7 +38,9 @@ while(passwordcheck(user,pwd)==False):
     user=input('User Email: ')
     pwd=stdiomask.getpass(prompt='Password: ', mask='*')
     print()
-  
+
+print('Authentication Successful!')
+
 def read_contacts(csv_file):
     first_names = []
     emails = []
