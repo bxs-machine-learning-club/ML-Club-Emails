@@ -13,11 +13,11 @@ import csv
 import subprocess
 import stdiomask
 
-contactsPath=r'C:\Users\School\Downloads\ML-Club-Emails-master\contacts.csv'
-messagePath=r'C:\Users\School\Downloads\ML-Club-Emails-master\message42120.txt'
-templatePath=r'C:\Users\School\Downloads\ML-Club-Emails-master\email_template.html'
+contactsPath=r'.\contacts.csv'
+messagePath=r'.\message.html'
+templatePath=r'.\email_template.html'
 
-testing=1
+testing=0
 
 def passwordcheck(usr,psw):
     server=smtplib.SMTP('smtp.gmail.com:587')
@@ -38,8 +38,9 @@ while(passwordcheck(user,pwd)==False):
     user=input('User Email: ')
     pwd=stdiomask.getpass(prompt='Password: ', mask='*')
     print()
-
+ 
 print('Authentication Successful!')
+print()
 
 def read_contacts(csv_file):
     first_names = []
@@ -115,6 +116,7 @@ def create_email(contacts_file, message_file, html_template, server, subject):
 if __name__ == "__main__":
     
     subject = input('Subject: ')
-    subject = subject if subject else "<no subject>"
+    subject = subject if subject else "Meeting Tomorrow"
     setup_email(contactsPath, messagePath, templatePath, subject)
+
     
