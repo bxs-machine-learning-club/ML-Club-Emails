@@ -1,0 +1,12 @@
+Hello ${PERSON_NAME},
+<br> <br>
+I hope you are doing well today. Here are some interesting opportunities that you guys might be interested in.
+<br> <br>
+1. Mark Cuban (one of the investors in <i>Shark Tank</i> is giving an introductory class on Machine Learning for beginners on April 15, 2020 from 7:00 pm to 8:30 pm. The link for the course is at bit.ly/ai-in-60. Why does Mark Cuban believe in AI? See "https://www.cnbc.com/2019/06/04/mark-cuban-keeps-book-in-his-bathroom-that-makes-him-a-better-investor.html".
+<br> <br>
+2. Do you want to participate in an online hackathon. If you do, THIS Saturday from 9 am to 9 pm, come to Local Hack Day: Share."https://localhackday.mlh.io/share". There will be tons of workshops and it is a great opportunity given that there are no hackathons in operation because of the virus. See you there!
+<br> <br>
+<br> <br>
+All the best,
+<br> <br>
+ML Club

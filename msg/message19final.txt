@@ -1,0 +1,17 @@
+Hello ${PERSON_NAME},
+<br><br>
+I hope you had a great weekend despite the unrest throughout the U.S.
+Don't let that discourage you though as the ML Club will be having its 
+<b><i>FINAL</b></i> meeting tomorrow at 4 pm. We will be playing games like
+<a href=https://skribbl.io">Skribbl.io</a> and perhaps <a href="
+https://allbad.cards">Cards Against Humanity</a> (I am bad at inappropriate
+humor). If you have any games you want us to play, suggest it in the meeting
+tomorrow. We'll have a grand old time.
+<br><br>
+Of course, if you want to do something educational, suggest
+it as well.  We can also teach you
+some ML stuff during the meeting. That was what school was, was it?
+<br> <br>
+See you at 4!
+<br>
+ML Club

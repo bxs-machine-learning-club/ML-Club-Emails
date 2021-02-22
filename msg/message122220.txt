@@ -1,0 +1,10 @@
+Good evening ${PERSON_NAME},
+<br> <br>
+I hope everyone had a nice weekend. We will be having a ML Club Meeting 
+<b>tomorrow</b>, at 3:45 PM EST. We will be covering the last topics of linear algebra so we can start preparing for actual machine learning the week after break! Get excited!
+<br>
+The lesson will be filled with some fun and interesting techniques to help you solve systems of linear equations and you will learn about two of the most important machine learning structures like closed-form equations and the <b> perceptron </b>. The COLAB for the linear algebra lectures are located <a href="https://drive.google.com/file/d/1urCKA0YF-DKRavyUspa2mWKD7G6PSEBY/view?usp=sharing">here</a>.
+<br><br>
+See you all then,
+<br>
+ML Club

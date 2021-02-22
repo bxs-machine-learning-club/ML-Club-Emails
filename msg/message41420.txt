@@ -1,0 +1,9 @@
+Hello ${PERSON_NAME},
+<br>
+I hope you are doing safe and keeping busy indoors. The ML Club will be having
+a remote meeting on the ML Club Hangouts tomorrow at 4 pm EST. The meeting
+will be about our club's logo: The PERCEPTRON! Be sure to come!
+<br>
+See you then,
+<br>
+ML Club

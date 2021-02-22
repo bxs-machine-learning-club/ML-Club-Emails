@@ -1,0 +1,8 @@
+Hi ${PERSON_NAME},<br><br>
+The ML Club will be having a meeting Tuesday, February 9<sup>th</sup>, 2021 at 3:45 pm discussing one of <b>the most important techniques</b> in machine learning and deep learning called <b>gradient descent</b>. You will be using this technique through your design of machine learning pipelines and with your creation of neural networks when we explore this topic in the coming weeks! Be sure to come to the club meeting as it will be highly interactive with a Jamboard!
+<br><br>
+Furthermore, we have a blog for the ML Club called the <cite>The Perceptron</cite>, which covers a lot of cool topics in the intersection between artificial intelligence and our society. The latest post there even has a recap of our last lesson on regularized regression! Please check it out at https://the-perceptron.com. 
+
+<br><br>
+See you for the important lesson on Tuesday!<br><br>
+ML Club [Michael]

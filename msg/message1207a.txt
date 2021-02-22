@@ -1,0 +1,10 @@
+Hello ${PERSON_NAME},
+<br>
+I hope you are doing well and had a great weekend. The ML Club would like your
+feedback! Please fill out <a href="https://forms.gle/2yLGP6L7xBwrGtQD8">this</a>
+to see how you are absorbing the stuff we are teaching you and to see if
+we need to go faster or slower. Your feedback is greatly appreciated!
+<br> <br>
+<strong>Thanks so much for your help,</strong>
+<br>
+ML Club

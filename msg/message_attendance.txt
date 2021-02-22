@@ -1,0 +1,14 @@
+Good evening ${PERSON_NAME},
+<br> <br>
+<strong> IGNORE THE LAST EMAIL SENT </strong>
+<br> <br>
+We hope you are doing well and are having a great weekend. In addition to our
+next meeting on <strong> this Tuesday </strong> on an introduction to 
+machine learning in artificial intelligence, we would like everyone who 
+attended our first meeting to fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvE3sbLs7ohKeLHr4rpcV6yzI0rOdGlqHHi4PPIovDX8x_7w/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link" target="_blank"> this </a> form so
+we can properly record our attendance for last meeting. We will stop asking
+you of this once the official attendance forms for clubs starts coming out.
+<br> <br>
+Thanks for your cooperation and we hope to see you at our next meeting,
+<br> <br>
+ML Club 

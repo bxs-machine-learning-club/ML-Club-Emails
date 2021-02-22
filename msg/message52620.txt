@@ -1,0 +1,18 @@
+Hello ${PERSON_NAME},
+<br> <br>
+I hope you are doing well amongst the quarantine and had a great Memorial Day
+weekend. This is just a reminder that the ML Club will be having a meeting
+tomorrow 5/26/20 at 4 pm. Since we are winding down the number of meetings
+we are having, we want YOU to choose what we do this meeting until we 
+close the club for the summer. The link is <a href
+="https://www.strawpoll.me/20165206" target="_blank">here</a>. Please 
+respond by tomorrow!!!
+<br> <br>
+Furthermore, we have created a YouTube channel that we highly recommend you
+look at. It is simply called <b> Bx Sci Machine Learning Club </a>. Both Mike
+and Zach have posted videos on it and we hope you learn from them!
+<br> <br>
+
+See you tom,
+<br>
+ML Club
