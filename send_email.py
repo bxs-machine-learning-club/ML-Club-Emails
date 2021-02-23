@@ -17,7 +17,7 @@ contactsPath=r'.\contacts.csv'
 messagePath=r'.\message.html'
 templatePath=r'.\email_template.html'
 
-testing=0
+testing=False
 
 def passwordcheck(usr,psw):
     server=smtplib.SMTP('smtp.gmail.com:587')
@@ -35,9 +35,9 @@ pwd=stdiomask.getpass(prompt='Password: ', mask='*')
    
 while(passwordcheck(user,pwd)==False):
     print()
+    print("Authentication unsuccessful. Try again. \n")
     user=input('User Email: ')
     pwd=stdiomask.getpass(prompt='Password: ', mask='*')
-    print()
  
 print('Authentication Successful! \n')
 
@@ -77,7 +77,7 @@ def create_email(contacts_file, message_file, html_template, server, subject):
     
     html_email_template = read_template(html_template)
 
-    if testing==0:
+    if not testing:
         for name, email in zip(names, emails):
             print('Sending to: '+name.title()+' at '+email)
             
