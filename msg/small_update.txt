@@ -1,7 +1,0 @@
-Hi ${PERSON_NAME},<br><br>
-Just a small update. People who are running in the elections should try to
-keep their speech under <b> 4 minutes </b> even though I will be cutting
-you off at 4.5 mins.
-<br><br>
-Thanks!<br><br>
-ML Club [Michael]

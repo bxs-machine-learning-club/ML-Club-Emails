@@ -1,9 +1,0 @@
-Hello ${PERSON_NAME},
-<br> <br>
-I finally got the email to work by putting the CSS styling inside the html template!
-<br>
-I might put this on GitHub if you want to see how I did it. Have a great afternoon! :-) :-)
-<br> <br>
-Best regards,
-<br> <br>
-ML Club & Michael (VP)

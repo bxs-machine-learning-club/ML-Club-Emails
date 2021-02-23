@@ -1,4 +1,4 @@
-__author__ = "Michael"
+__author__ = "David"
 
 """This script sends an email to members in the ML Club.
     Make sure to credit Michael Batavia for future usage of the script in the club
@@ -10,7 +10,36 @@ from email.message import EmailMessage
 from email.mime.text import MIMEText
 import argparse
 import csv
+import subprocess
+import stdiomask
 
+contactsPath=r'.\contacts.csv'
+messagePath=r'.\message.html'
+templatePath=r'.\email_template.html'
+
+testing=0
+
+def passwordcheck(usr,psw):
+    server=smtplib.SMTP('smtp.gmail.com:587')
+    server.starttls()
+    try:
+        server.login(usr,psw)
+        ret = True
+    except:
+        ret = False
+    server.quit()
+    return ret
+
+user=input('User Email: ')
+pwd=stdiomask.getpass(prompt='Password: ', mask='*')
+   
+while(passwordcheck(user,pwd)==False):
+    print()
+    user=input('User Email: ')
+    pwd=stdiomask.getpass(prompt='Password: ', mask='*')
+    print()
+ 
+print('Authentication Successful! \n')
 
 def read_contacts(csv_file):
     first_names = []
@@ -34,15 +63,7 @@ def read_template(message_file):
         return Template(message_content)
 
 
-def get_credentials(credentials_file):
-    if os.path.exists(credentials_file):
-        with open(credentials_file, mode="r", encoding="utf-8") as message:
-            message_content = message.readline()
-        return message_content.split(", ")[0], message_content.split(", ")[1]
-
-
 def setup_email(contacts_file, message_file, html_template, title):
-    user, pwd = get_credentials('credentials.txt')
     server = smtplib.SMTP(host="smtp.gmail.com", port=587)
     server.starttls()
     server.login(user, pwd)
@@ -51,39 +72,50 @@ def setup_email(contacts_file, message_file, html_template, title):
 
 def create_email(contacts_file, message_file, html_template, server, subject):
     names, emails = read_contacts(contacts_file)
-    print(emails)
+    
     message_template = read_template(message_file)
-    print(message_template)
+    
     html_email_template = read_template(html_template)
 
-    for name, email in zip(names, emails):
+    if testing==0:
+        for name, email in zip(names, emails):
+            print('Sending to: '+name.title()+' at '+email)
+            
+            msg = EmailMessage()
+            message = message_template.substitute(PERSON_NAME=name.title())
+            html_email: str = html_email_template.substitute(MESSAGE=message)
+            
+            msg['To'] = email
+            msg['From'] = user
+            msg['Subject'] = subject
+
+            msg.set_content(MIMEText(html_email, 'html'))
+            server.send_message(msg)
+            print('Success!')
+            print()
+            
+            del msg
+    else:
+        print('Sending to: '+'Me'+' at '+user)
         msg = EmailMessage()
-        message = message_template.substitute(PERSON_NAME=name.title())
+        message = message_template.substitute(PERSON_NAME='Me')
         html_email: str = html_email_template.substitute(MESSAGE=message)
 
-        user = get_credentials('credentials.txt')[0]
-        print(user)
-        msg['To'] = email
+        msg['To'] = user
         msg['From'] = user
         msg['Subject'] = subject
 
-        # images = ('logo.png', '../images/zach.jpg',
-        #          '../images/michael.png', '../images/montaha.png', '../images/robert.png')
-
         msg.set_content(MIMEText(html_email, 'html'))
         server.send_message(msg)
-        print('success!', name, email)
+        print('Success!')
 
         del msg
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("contacts_file", help="The csv file of the contacts to send this email to.")
-    parser.add_argument("message_file", help="The message file for the message to send in the email.")
-    parser.add_argument("html_template", help="The HTML template for the nice display in the email")
-    parser.add_argument("subject", help="The subject of the email to send.")
+    
+    subject = input('Subject: ')
+    subject = subject if subject else "Meeting Tomorrow"
+    setup_email(contactsPath, messagePath, templatePath, subject)
 
-    args = parser.parse_args()
-    subject = args.subject if args.subject else "<no subject>"
-    setup_email(args.contacts_file, args.message_file, args.html_template, subject)
+    
