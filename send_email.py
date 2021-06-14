@@ -12,12 +12,15 @@ import argparse
 import csv
 import subprocess
 import stdiomask
+import readline
 
-contactsPath=r'.\contacts.csv'
-messagePath=r'.\message.html'
-templatePath=r'.\email_template.html'
+filename= lambda file: os.path.join(os.path.dirname(__file__),file)
 
-testing=False
+contactsPath=filename('contacts.csv')
+messagePath=filename('message.html')
+templatePath=filename('email_template.html')
+
+testing=True
 
 def passwordcheck(usr,psw):
     server=smtplib.SMTP('smtp.gmail.com:587')
