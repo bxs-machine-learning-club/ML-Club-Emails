@@ -8,4 +8,4 @@ This is the program to automate sending the club's weekly email to all of its me
 1. Go to Command Prompt (or Terminal if you are on OSX or Linux) and run the .py program.
 1. Follow the prompts to enter in your Bronx Science email, Bronx Science password and the subject of the email.
 
-That's it!
+That's all!
