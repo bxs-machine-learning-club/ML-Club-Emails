@@ -1,6 +1,6 @@
 __author__ = "David"
 
-"""This script sends an email to members in the ML Club.
+"""This script sends an email to members of the ML Club.
     Make sure to credit Michael Batavia for future usage of the script in the club
 """
 import os
